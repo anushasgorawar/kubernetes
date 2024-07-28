@@ -9,3 +9,4 @@ specs:
   containers:
     - name: nginx
       image: nginx
+#>kubectl <apply/create> -f pod-definition.yml

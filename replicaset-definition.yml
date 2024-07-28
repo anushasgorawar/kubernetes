@@ -16,3 +16,13 @@ specs:
       containers:
         - name: nginx
           image: nginx
+  replicas: 3
+  selector:
+    matchLabels:
+      type: front-end
+# >kubectl <apply/create> -f replicaset-definition.yml
+#To scale:
+#1. Change the replicas count
+# >kubectl replace -f replicaset-definition.yml
+#2. >kubectl scale --replicas=6 replication-definition.yaml
+#3. >kubectl scale --replicas=6 resplicaset myapp-rs
